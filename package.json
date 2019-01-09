@@ -1,0 +1,15 @@
+{
+  "name": "3-heads_tails",
+  "version": "1.0.0",
+  "description": "Heads and tails implementation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "heads",
+    "tails"
+  ],
+  "author": "Amiraslan Bakhshili",
+  "license": "ISC"
+}
