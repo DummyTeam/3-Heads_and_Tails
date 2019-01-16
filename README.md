@@ -1,11 +1,13 @@
 # 3-Heads_and_Tails
 Heads&amp;Tails
 
+![Screen from program](https://raw.githubusercontent.com/DummyTeam/3-Heads_and_Tails/master/art/preview.gif)
+
+
 port: 2424
 
 Written in `node.js` `express`
 
-![Screen from program](https://raw.githubusercontent.com/DummyTeam/3-Heads_and_Tails/master/art/preview.gif)
 
 
 ## Install and Run
