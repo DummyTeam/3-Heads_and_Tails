@@ -1,29 +1,25 @@
-var container = document.getElementById('ht-container');
 var coin = document.getElementById('ht-coin');
-
-var cart = document.getElementById('ht-card');
-var tail = document.getElementById('ht-back');
-
-var isFace = true;
 
 var flip = function() {
   h_t = parseInt((1 / Math.random()) * 10000) % 2;
 
-  isFace != isFace;
+  var matrix = window.getComputedStyle(coin, null).getPropertyValue("transform");
+  var isTurned = true;
 
-  if (isFace) {
-    cart.style.transform = "rotateY(540deg)";
-  } else {
-    tail.style.transform = "rotateY(540deg)";
+  if (matrix !== '') {
+    var values = matrix.split('(')[1].split(')')[0].split(',');
+    isTurned = Math.abs(values[2]) > 7.34788e-16;
   }
 
-  if (h_t === 0) {
-    coin.innerHTML = "H";
-  } else {
-    coin.innerHTML = "T";
-  }
+  var initialTurnValue = (isTurned) ? 0 : 12;
+  var turn = (initialTurnValue + h_t) / 2.0;
 
-  console.log(h_t);
+  coin.style.webkitTransform = 'rotateY(' + turn + 'turn)';
+  coin.style.mozTransform = 'rotateY(' + turn + 'turn)';
+  coin.style.msTransform = 'rotateY(' + turn + 'turn)';
+  coin.style.oTransform = 'rotateY(' + turn + 'turn)';
+  coin.style.transform = 'rotateY(' + turn + 'turn)';
+
 }
 
-container.addEventListener("click", flip);
+coin.addEventListener("click", flip);

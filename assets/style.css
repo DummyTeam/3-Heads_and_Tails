@@ -4,10 +4,11 @@
   border: 0;
   list-style: none;
   text-decoration: none;
+  box-sizing: border-box;
 }
 
 body {
-  background: white;
+  background: #262626;
   text-align: center;
   font-family: 'Segoe UI', sans-serif;
   padding: 20px 32px 20px 32px;
@@ -16,90 +17,56 @@ body {
 h1.ht-header {
   font-size: 72px;
   font-weight: 700;
-  color: black;
-  margin-top: 30px;
+  color: #fead13;
+  margin-top: 10px;
 }
 
 p.ht-description {
   font-size: 32px;
   font-weight: 100;
-  color: black;
+    color: #fead13;
   margin-top: 10px;
 }
 
-.ht-coin {
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -o-user-select: none;
-  margin: auto;
-  margin-top: 50px;
-  text-align: center;
-  width: 200px;
-  height: 200px;
-  font-size: 140px;
-  line-height: 216px;
-  padding: 80px;
-  border-radius: 100%;
-  font-family: 'Parisienne', cursive;
-  background: #ededed;
-  color: rgba(90, 90, 90, 0.93);
-  cursor: pointer;
-  background-image: -webkit-linear-gradient(#e8e8e8 0%, #d6d6d6 100%);
-  background-image: linear-gradient(#e8e8e8 0%, #d6d6d6 100%);
-  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.66);
-  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.5), 0 2px 2px rgba(0, 0, 0, 0.19);
-  border-bottom: solid 2px #b5b5b5;
-}
-
-.ht-coin.fa {
-  line-height: 80px;
-}
-
-.ht-coin:active {
-  background-image: -webkit-linear-gradient(#efefef 0%, #d6d6d6 100%);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 2px 2px rgba(0, 0, 0, 0.19);
-  border-bottom: none;
-}
-
 #ht-container {
-  position: relative;
-  margin: 10px auto;
-  width: 500px;
-  height: 500px;
-  z-index: 1;
-}
-
-#ht-container {
-  perspective: 1000;
-}
-
-#ht-card {
   width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-  transition: all 0.7s ease-in-out;
-  background: #99aa99;
+  height: 380px;
 }
 
-/* #ht-container:hover #ht-card {
-  /*transform: rotateY(540deg);
-} */
+#ht-coin {
+  width: 350px;
+  height: 350px;
+  margin: auto;
+  margin-top: 20px;
+  backface-visibility: visible;
+  transform-style: preserve-3d;
+  perspective: 500px;
+  perspective-origin: center;
+  transition: all 1.8s ease-in;
+  transform: rotateY(1turn);
+}
 
 .face {
   position: absolute;
   width: 100%;
   height: 100%;
-  backface-visibility: hidden;
+  padding: 10px;
+  font-size: 184px;
+  text-align: center;
+  border: 20px solid #fead13;
+  color: #fead13;
+  font-weight: bold;
+  border-radius: 100%;
+  line-height: 273px;
+  cursor: pointer;
 }
 
-.face.back {
-  display: block;
-  /*transform: rotateY(540deg);*/
-  box-sizing: border-box;
-  padding: 10px;
-  color: white;
-  text-align: center;
-  background: #aeaeae;
+.front{
+  transform: translateZ(1px);
+  background: #21a5ad;
+}
+
+.back{
+  transform: rotateY(180deg) translateZ(1px);
+  background: #e44231;
 }
