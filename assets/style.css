@@ -24,7 +24,7 @@ h1.ht-header {
 p.ht-description {
   font-size: 32px;
   font-weight: 100;
-    color: #fead13;
+  color: #fead13;
   margin-top: 10px;
 }
 
@@ -59,14 +59,15 @@ p.ht-description {
   border-radius: 100%;
   line-height: 273px;
   cursor: pointer;
+  box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.48);
 }
 
-.front{
+.front {
   transform: translateZ(1px);
   background: #21a5ad;
 }
 
-.back{
+.back {
   transform: rotateY(180deg) translateZ(1px);
   background: #e44231;
 }

@@ -1,4 +1,5 @@
 var coin = document.getElementById('ht-coin');
+var desc = document.getElementById('ht-description');
 
 var flip = function() {
   h_t = parseInt((1 / Math.random()) * 10000) % 2;
@@ -19,6 +20,10 @@ var flip = function() {
   coin.style.msTransform = 'rotateY(' + turn + 'turn)';
   coin.style.oTransform = 'rotateY(' + turn + 'turn)';
   coin.style.transform = 'rotateY(' + turn + 'turn)';
+
+  window.setTimeout(function() {
+    desc.innerHTML = (h_t === 1) ? "Tails!" : "Heads!";
+  }, 1800);
 
 }
 
